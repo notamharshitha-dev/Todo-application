@@ -1,24 +1,16 @@
 import './App.css'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import A from './propsDrillingAndContext/a'
-import Count from './hooks/count'
-import { myContext}  from './propsDrillingAndContext/mycontext'
-import Todo from './hooks/todolist'
+import { Link, Outlet } from 'react-router-dom'
+import Form from './formHandling/formHandling'
+import CounterReducer from './reducers/counterReducers'
 
-function App() { 
-      var name="Harshitha and Hari";
-      var obj={
-            fn:"harshitha",
-            ln:"Notam"
-      }
-      function hello(){
-            //alert("hello")
-            return <h1>Hello from function </h1>
-      }
-      return <myContext.Provider value={{name,obj,hello}} >
-            <Todo/>
-            <Count/>
-            <A/>
-      </myContext.Provider>
-} 
+import ThemeChanging from './reducers/themeChanging'
+import Counter from './store/counter'
+import Todolist from './store/todolist'
+function App() {      
+      return  <div className='m-3 p-3' >
+           <Counter/>
+            <Todolist/>
+      </div>        
+      } 
 export default App
