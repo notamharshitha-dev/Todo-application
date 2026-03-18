@@ -17,4 +17,4 @@ function Todolist(props){
         </ul>
     </div>
 }
-export default connect((store)=>{return store.todolistR})(Todolist)
+//export default connect((store)=>{return store.todolistR})(Todolist)
